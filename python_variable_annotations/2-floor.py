@@ -16,5 +16,4 @@ def floor(n: float) -> int:
     Returns:
         int: The floor of the float number
     """
-    return math.floor(n) 
-    
+    return math.floor(n)
