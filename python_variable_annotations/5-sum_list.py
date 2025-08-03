@@ -9,10 +9,10 @@ from typing import List
 def sum_list(input_list: List[float]) -> float:
     """
     Sum all floats in a list and return the result.
-    
+
     Args:
         input_list (List[float]): List of float numbers to sum
-        
+
     Returns:
         float: Sum of all floats in the list
     """
