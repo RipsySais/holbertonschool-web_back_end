@@ -1,18 +1,17 @@
 #!/usr/bin/env python3
-"""
-Type-annotated function that concatenates two strings.
-"""
+import asyncio
+import random
+from typing import List
 
 
-def concat(str1: str, str2: str) -> str:
-    """
-    Concatenate two strings and return the result.
+async def wait_random(max_delay: int = 10) -> float:
+    """Wait for random delay between 0 and max_delay"""
+    delay = random.uniform(0, max_delay)
+    await asyncio.sleep(delay)
+    return delay
 
-    Args:
-        str1 (str): First string
-        str2 (str): Second string
 
-    Returns:
-        str: Concatenated string
-    """
-    return str1 + str2
+async def wait_n(n: int, max_delay: int) -> List[float]:
+    """Run wait_random n times concurrently and return sorted delays"""
+    tasks = [asyncio.create_task(wait_random(max_delay)) for _ in range(n)]
+    return [await task for task in asyncio.as_completed(tasks)]
