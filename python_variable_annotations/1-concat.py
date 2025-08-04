@@ -1,18 +1,9 @@
 #!/usr/bin/env python3
-"""
-Type-annotated function that concatenates two strings.
-"""
-
-
-def concat(str1: str, str2: str) -> str:
-    """
-    Concatenate two strings and return the result.
-
-    Args:
-        str1 (str): First string
-        str2 (str): Second string
-
-    Returns:
-        str: Concatenated string
-    """
-    return str1 + str2
+async def wait_n(n: int, max_delay: int) -> List[float]:
+    """Version alternative utilisant as_completed pour maintenir l'ordre"""
+    tasks = [wait_random(max_delay) for _ in range(n)]
+    delays = []
+    for task in asyncio.as_completed(tasks):
+        delay = await task
+        delays.append(delay)
+    return delays
