@@ -1,17 +1,18 @@
-#!/usr/bin/python3
-import asyncio
-import random
+#!/usr/bin/env python3
+"""
+Type-annotated function that adds two floats.
+"""
 
 
-async def wait_random(max_delay: int = 10) -> float:
-    """Attend un délai aléatoire entre 0 et max_delay secondes et le retourne.
+def add(a: float, b: float) -> float:
+    """
+    Add two float numbers and return their sum.
     
     Args:
-        max_delay: Le délai maximum en secondes (défaut: 10)
+        a (float): First float number
+        b (float): Second float number
         
     Returns:
-        Le délai aléatoire qui a été attendu (float)
+        float: Sum of a and b
     """
-    delay = random.uniform(0, max_delay)
-    await asyncio.sleep(delay)
-    return delay
+    return a + b
