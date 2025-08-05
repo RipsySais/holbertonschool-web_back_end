@@ -5,7 +5,6 @@ Module for measuring the runtime of concurrent coroutines.
 
 import asyncio
 import time
-from typing import Callable
 
 # Import wait_n from the previous file
 wait_n = __import__('1-concurrent_coroutines').wait_n
