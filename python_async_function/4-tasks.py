@@ -5,7 +5,6 @@ Module for creating multiple asyncio tasks concurrently.
 
 import asyncio
 
-# Import task_wait_random from the previous file
 task_wait_random = __import__('3-tasks').task_wait_random
 
 

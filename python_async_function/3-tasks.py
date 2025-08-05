@@ -5,7 +5,6 @@ Module for creating asyncio tasks.
 
 import asyncio
 
-# Import wait_random from the basic async syntax file
 wait_random = __import__('0-basic_async_syntax').wait_random
 
 
