@@ -1,7 +1,5 @@
 #!/usr/bin/env python3
-"""
-Module for creating asyncio tasks.
-"""
+"""Module for creating asyncio tasks."""
 
 import asyncio
 

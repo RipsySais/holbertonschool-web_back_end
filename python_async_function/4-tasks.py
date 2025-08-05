@@ -1,7 +1,5 @@
 #!/usr/bin/env python3
-"""
-Module for creating multiple asyncio tasks concurrently.
-"""
+"""Module for creating multiple asyncio tasks concurrently."""
 
 import asyncio
 
