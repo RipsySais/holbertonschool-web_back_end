@@ -1,16 +1,21 @@
-#!/usr/bin/python3
+#!/usr/bin/env python3
+"""
+Module for basic async syntax.
+"""
+
 import asyncio
 import random
 
 
 async def wait_random(max_delay: int = 10) -> float:
-    """Attend un délai aléatoire entre 0 et max_delay secondes et le retourne.
+    """
+    Wait for a random delay between 0 and max_delay seconds.
     
     Args:
-        max_delay: Le délai maximum en secondes (défaut: 10)
+        max_delay (int): Maximum delay in seconds (default: 10)
         
     Returns:
-        Le délai aléatoire qui a été attendu (float)
+        float: The random delay that was waited for
     """
     delay = random.uniform(0, max_delay)
     await asyncio.sleep(delay)
