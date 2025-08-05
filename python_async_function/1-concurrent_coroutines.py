@@ -2,7 +2,7 @@
 """Execute multiple coroutines concurrently and return sorted delays."""
 import asyncio
 
-# Import dynamique pour respecter le nom du fichier imposé
+# Dynamic import to respect the imposed file name
 wait_random = __import__('0-basic_async_syntax').wait_random
 
 async def wait_n(n: int, max_delay: int) -> list[float]:
