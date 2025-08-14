@@ -1,19 +1,25 @@
 #!/usr/bin/env python3
-"""Execute multiple coroutines concurrently and return sorted delays."""
+"""
+This module contains an asynchronous function that waits
+for a random delay multiple times.
+"""
 import asyncio
+from typing import List
 
 wait_random = __import__('0-basic_async_syntax').wait_random
 
-async def wait_n(n: int, max_delay: int) -> list[float]:
+
+async def wait_n(n: int, max_delay: int = 10) -> List[float]:
     """
-    Spawn wait_random n times with max_delay.
-    Return list of delays in ascending order (order of completion).
+    Wait for a random delay multiple times.
     """
-    tasks = [asyncio.create_task(wait_random(max_delay)) for _ in range(n)]
+    tasks = []
+    for item in range(n):
+        tasks.append(wait_random(max_delay))
 
     results = []
     for task in asyncio.as_completed(tasks):
-        res = await task
-        results.append(res)
+        delay = await task
+        results.append(delay)
 
     return results
