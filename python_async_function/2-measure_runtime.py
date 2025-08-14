@@ -1,6 +1,8 @@
 #!/usr/bin/env python3
-"""Module for measuring the runtime of concurrent coroutines."""
-
+"""
+This module contains an asynchronous function that waits
+for a random delay multiple times.
+"""
 import asyncio
 import time
 
@@ -9,20 +11,12 @@ wait_n = __import__('1-concurrent_coroutines').wait_n
 
 def measure_time(n: int, max_delay: int) -> float:
     """
-    Measure the total execution time for wait_n(n, max_delay).
-    
-    Args:
-        n: Number of coroutines to run
-        max_delay: Maximum delay for each coroutine
-        
-    Returns:
-        Average time per coroutine (total_time / n)
+    Wait for a random delay multiple times.
     """
-    start_time = time.time()
-    
+    start = time.perf_counter()
     asyncio.run(wait_n(n, max_delay))
-    
-    end_time = time.time()
-    total_time = end_time - start_time
-    
+    end = time.perf_counter()
+
+    total_time = end - start
+
     return total_time / n
