@@ -1,23 +1,2 @@
-#!/usr/bin/mongo
-// Solution garantie pour conteneurs
-try {
-    // Connexion avec timeout
-    conn = new Mongo("127.0.0.1:27017/?connectTimeoutMS=3000");
-    
-    // Version alternative si échec
-    if (!conn) conn = new Mongo("localhost:27017/?connectTimeoutMS=3000");
-    
-    // Récupération des bases
-    var dbs = conn.getDBNames();
-    
-    // Affichage formaté
-    dbs.forEach(function(db) {
-        print(db);
-    });
-    
-} catch(e) {
-    print("ERROR: " + e);
-    print("\nVérifiez que MongoDB est bien démarré avec :");
-    print("mongod --dbpath /data/db --logpath /tmp/mongod.log --bind_ip 127.0.0.1 --fork");
-}
-EOF
+// my comment
+show dbs
