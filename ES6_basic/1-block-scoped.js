@@ -1,13 +1,13 @@
 // 1-block-scoped.js
 
 export default function taskBlock(trueOrFalse) {
-  let task = false;
-  let task2 = true;
+  const task = false;
+  const task2 = true;
 
   if (trueOrFalse) {
-    let taskInside = true;
-    let task2Inside = false;
-    // on n’utilise pas taskInside ni task2Inside en dehors
+    const task = true;
+    const task2 = false;
+    // Ces deux constantes existent seulement dans le bloc if
   }
 
   return [task, task2];
