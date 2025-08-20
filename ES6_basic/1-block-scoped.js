@@ -3,8 +3,8 @@ export default function taskBlock(trueOrFalse) {
   const task2 = true;
 
   if (trueOrFalse) {
-    const task = true;    // Nouvelle variable de bloc
-    const task2 = false;  // Nouvelle variable de bloc
+    // Ne pas redéclarer les variables du même nom
+    // Le bloc if n'affecte pas les variables existantes
   }
 
   return [task, task2];
