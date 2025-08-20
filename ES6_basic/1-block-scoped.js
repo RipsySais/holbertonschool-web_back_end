@@ -3,8 +3,8 @@ export default function taskBlock(trueOrFalse) {
   const task2 = true;
 
   if (trueOrFalse) {
-    const task = true;
-    const task2 = false;
+    // Ne pas redéclarer les variables, juste les utiliser
+    console.log('Condition is true');
   }
 
   return [task, task2];
