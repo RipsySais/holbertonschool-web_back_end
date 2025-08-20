@@ -1,10 +1,11 @@
 export default function taskBlock(trueOrFalse) {
-  const task = false;
-  const task2 = true;
+  let task = false;
+  let task2 = true;
 
   if (trueOrFalse) {
-    // Ne pas redéclarer les variables, juste les utiliser
-    console.log('Condition is true');
+    const innerTask = true;
+    const innerTask2 = false;
+    // Les variables internes n'affectent pas les externes
   }
 
   return [task, task2];
