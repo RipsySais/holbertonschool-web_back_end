@@ -1,10 +1,13 @@
+// 1-block-scoped.js
+
 export default function taskBlock(trueOrFalse) {
   const task = false;
   const task2 = true;
 
   if (trueOrFalse) {
-    // Ne pas redéclarer les variables du même nom
-    // Le bloc if n'affecte pas les variables existantes
+    // Ces variables existent uniquement dans ce bloc
+    const task = true;
+    const task2 = false;
   }
 
   return [task, task2];
