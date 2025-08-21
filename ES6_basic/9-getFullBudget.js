@@ -1,9 +1,8 @@
-export default function getBudgetForCurrentYear(income, gdp, capita) {
-  const currentYear = new Date().getFullYear();
+// Exemple de syntaxe méthode raccourcie
+const obj = {
+  // Ancienne façon
+  oldMethod: function() { return 'old'; },
   
-  return {
-    [`income-${currentYear}`]: income,
-    [`gdp-${currentYear}`]: gdp,
-    [`capita-${currentYear}`]: capita,
-  };
-}
+  // Nouvelle façon ES6
+  newMethod() { return 'new'; }
+};
