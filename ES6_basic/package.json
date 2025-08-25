@@ -1,16 +1,13 @@
 {
   "name": "es6_basic",
   "version": "1.0.0",
-  "main": "index.js",
   "type": "module",
   "scripts": {
-    "test": "jest --config jest.config.cjs",
+    "test": "jest --config jest.config.js",
+    "test:file": "jest --config jest.config.js",
     "lint": "eslint .",
     "dev": "node"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
   "devDependencies": {
     "@babel/core": "^7.28.3",
     "@babel/preset-env": "^7.28.3",
