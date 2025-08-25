@@ -3,15 +3,15 @@
   "version": "1.0.0",
   "main": "index.js",
   "type": "module",
-  "scripts": {
-    "test": "jest",
-    "lint": "eslint .",
-    "dev": "node"
-  },
+  "description": "ES6 basic exercises for Holberton",
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "description": "",
+  "scripts": {
+    "test": "jest --config jest.config.js",
+    "lint": "eslint .",
+    "dev": "node"
+  },
   "devDependencies": {
     "@babel/core": "^7.28.3",
     "@babel/preset-env": "^7.28.3",
