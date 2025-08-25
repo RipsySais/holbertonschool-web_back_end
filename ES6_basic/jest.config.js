@@ -1,5 +1,6 @@
+// jest.config.js
 export default {
-  testEnvironment: "node",       // environnement Node
-  transform: {},                  // pas de transformation Babel pour tests simples
-  testMatch: ["**/*.test.js"]     // tous les fichiers .test.js
+  testEnvironment: "node",
+  transform: {},              // pas de Babel ici
+  testMatch: ["**/__tests__/**/*.test.js"]  // uniquement les fichiers dans __tests__
 };
