@@ -1,11 +1,11 @@
 // __tests__/12-createReportObject.test.js
-import createReportObject from '../12-createReportObject.js';
+import createReportObject from "../12-createReportObject.js";
 
-describe('createReportObject', () => {
-  test('should return an object with allEmployees and getNumberOfDepartments', () => {
+describe("createReportObject", () => {
+  test("should return an object with allEmployees and getNumberOfDepartments", () => {
     const employeesList = {
-      engineering: ['Bob', 'Jane'],
-      marketing: ['Sylvie']
+      engineering: ["Bob", "Jane"],
+      marketing: ["Sylvie"]
     };
 
     const report = createReportObject(employeesList);
