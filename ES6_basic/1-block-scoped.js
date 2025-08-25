@@ -5,9 +5,10 @@ export default function taskBlock(trueOrFalse) {
   const task2 = true;
 
   if (trueOrFalse) {
-    const task = true;
-    const task2 = false;
-    // Ces deux constantes existent seulement dans le bloc if
+    // Constantes locales au bloc if
+    const taskIf = true;
+    const task2If = false;
+    // Elles restent locales et ne sont pas retournées
   }
 
   return [task, task2];
