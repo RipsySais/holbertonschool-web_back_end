@@ -4,32 +4,13 @@
   "description": "ES6 Classes project",
   "main": "index.js",
   "scripts": {
-    "test": "jest",
-    "test:watch": "jest --watch",
-    "test:coverage": "jest --coverage"
+    "test": "jest"
   },
   "devDependencies": {
     "@babel/core": "^7.6.0",
-    "@babel/node": "^7.8.0",
     "@babel/preset-env": "^7.6.0",
-    "babel-jest": "^30.0.5",
-    "jest": "^30.0.5"
-  },
-  "jest": {
-    "testMatch": [
-      "**/*.test.js"
-    ],
-    "collectCoverageFrom": [
-      "**/*.js",
-      "!**/node_modules/**",
-      "!**/coverage/**",
-      "!**/jest.config.js"
-    ],
-    "coverageDirectory": "coverage",
-    "coverageReporters": [
-      "text",
-      "lcov",
-      "html"
-    ]
+    "@babel/node": "^7.8.0",
+    "babel-jest": "^24.9.0",
+    "jest": "^24.9.0"
   }
 }
