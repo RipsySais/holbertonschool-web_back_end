@@ -4,7 +4,10 @@
   "description": "ES6 Classes project",
   "main": "index.js",
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage",
+    "dev": "npx babel-node"
   },
   "devDependencies": {
     "@babel/core": "^7.6.0",
