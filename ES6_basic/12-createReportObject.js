@@ -1,15 +1,18 @@
-// 11-createEmployeesObject.js
+// 12-createReportObject.js
 
 /**
- * Creates an object with the department name as key
- * and an array of employees as value.
+ * Creates a report object from the given employees list.
  *
- * @param {string} departmentName - The name of the department
- * @param {string[]} employees - The list of employees
- * @returns {Object} - Object with departmentName as key and employees as value
+ * @param {Object} employeesList - Object returned by createEmployeesObject
+ * @returns {Object} - Report object with allEmployees and a method
  */
-export default function createEmployeesObject(departmentName, employees) {
+export default function createReportObject(employeesList) {
   return {
-    [departmentName]: employees,
+    allEmployees: {
+      ...employeesList,
+    },
+    getNumberOfDepartments(employees) {
+      return Object.keys(employees).length;
+    },
   };
 }
