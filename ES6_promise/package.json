@@ -1,0 +1,24 @@
+{
+  "name": "es6_promise",
+  "version": "1.0.0",
+  "description": "Projet pour manipuler les Promises en ES6",
+  "type": "module",
+  "main": "0-main.js",
+  "scripts": {
+    "dev": "node --loader @babel/node",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "ES6",
+    "Promise",
+    "JavaScript"
+  ],
+  "author": "Ahmed Cisse",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/cli": "^7.28.3",
+    "@babel/core": "^7.24.0",
+    "@babel/node": "^7.24.0",
+    "@babel/preset-env": "^7.24.0"
+  }
+}
