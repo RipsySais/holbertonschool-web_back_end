@@ -1,20 +1,16 @@
-function cleanSet(set, startString) {
-    if (!(set instanceof Set) || typeof startString !== 'string' || startString.length === 0) {
-        return '';
+/**
+ * Retourne une chaîne de caractères des valeurs d'un Set qui commencent par startString,
+ * en supprimant startString et en joignant les résultats avec un tiret.
+ * @param {Set} set - Le Set à filtrer.
+ * @param {String} startString - La chaîne de début à vérifier.
+ * @returns {String} - Chaîne de caractères des valeurs filtrées, séparées par "-".
+ */
+export default function cleanSet(set, startString) {
+  const result = [];
+  for (const value of set) {
+    if (value.startsWith(startString)) {
+      result.push(value.slice(startString.length));
     }
-    
-    const filteredValues = [];
-    
-    for (const value of set) {
-        if (typeof value === 'string' && value.startsWith(startString)) {
-            const remainingPart = value.slice(startString.length);
-            if (remainingPart !== value) { // Évite d'ajouter si le découpage ne change rien
-                filteredValues.push(remainingPart);
-            }
-        }
-    }
-    
-    return filteredValues.join('-');
+  }
+  return result.join('-');
 }
-
-export default cleanSet;
