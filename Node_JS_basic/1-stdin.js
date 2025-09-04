@@ -1,16 +1,17 @@
-// Affiche le message d'accueil
-process.stdout.write("Welcome to Holberton School, what is your name?\n");
+process.stdout.write('Welcome to Holberton School, what is your name?\n');
 
-// Écoute l'entrée de l'utilisateur
-process.stdin.on("data", (data) => {
-  const name = data.toString().trim();
+process.stdin.setEncoding('utf8');
+
+// Lorsqu'on reçoit une donnée sur stdin
+process.stdin.on('data', (data) => {
+  const name = data.trim();
   process.stdout.write(`Your name is: ${name}\n`);
 });
 
-// Écoute la fin de l'entrée (par exemple, Ctrl+D ou fin de l'entrée pipée)
+// Lorsqu'on termine stdin (ex: echo "John" | node 1-stdin.js, ou Ctrl+D)
 process.stdin.on('end', () => {
-  process.stdout.write("This important software is now closing\n");
+  process.stdout.write('This important software is now closing\n');
 });
 
-// Résume le processus stdin pour recevoir les entrées
+// Nécessaire pour le mode pipe
 process.stdin.resume();
