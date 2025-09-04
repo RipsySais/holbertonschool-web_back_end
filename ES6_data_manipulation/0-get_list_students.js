@@ -1,7 +1,3 @@
-/**
- * Retourne une liste d'étudiants sous forme de tableau d'objets.
- * @returns {Array} Un tableau contenant les objets étudiants.
- */
 export default function getListStudents() {
   return [
     { id: 1, firstName: 'Guillaume', location: 'San Francisco' },
