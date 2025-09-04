@@ -1,16 +1,27 @@
-// Affiche le message d'accueil
-process.stdout.write("Welcome to Holberton School, what is your name?\n");
+// 1-stdin.js
 
-// Écoute l'entrée de l'utilisateur
-process.stdin.on("data", (data) => {
-  const name = data.toString().trim();
-  process.stdout.write(`Your name is: ${name}\n`);
+const readline = require('readline');
+
+// Créez une interface pour l'entrée et la sortie
+const rl = readline.createInterface({
+    input: process.stdin,
+    output: process.stdout
 });
 
-// Écoute la fin de l'entrée (par exemple, Ctrl+D ou fin de l'entrée pipée)
-process.stdin.on('end', () => {
-  process.stdout.write("This important software is now closing\n");
+// Affiche le message de bienvenue
+console.log('Welcome to Holberton School, what is your name?');
+
+// Demande à l'utilisateur d'entrer son nom
+rl.question('', (input) => {
+    if (input.trim()) {
+        console.log(`Your name is: ${input}`);
+    } else {
+        console.log('Your name is: ');  // Affiche une ligne vide si aucun nom n'est saisi
+    }
+    rl.close(); // Ferme l'interface de lecture après avoir obtenu l'entrée
 });
 
-// Résume le processus stdin pour recevoir les entrées
-process.stdin.resume();
+// Lorsque l'interface de lecture se ferme, affiche le message de fermeture
+rl.on('close', () => {
+    console.log('This important software is now closing');
+});
