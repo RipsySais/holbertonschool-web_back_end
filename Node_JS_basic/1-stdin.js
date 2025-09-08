@@ -12,4 +12,3 @@ process.stdin.on('end', () => {
 });
 
 process.stdin.resume();
-
